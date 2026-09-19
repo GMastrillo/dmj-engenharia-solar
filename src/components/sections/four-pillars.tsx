@@ -84,18 +84,18 @@ const pillars: Pillar[] = [
 
 export function FourPillars() {
   return (
-    <section id="pilares" className="py-20 sm:py-28 bg-[#070B14] relative border-t border-white/[0.08]">
+    <section id="pilares" className="py-20 sm:py-28 bg-[#F8FAFC] relative border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-amber-400 mb-3 sm:mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-xs font-mono text-amber-700 mb-3 sm:mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
             <span>ESTRUTURA DE ENGENHARIA DMJ</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-bold text-slate-900 tracking-tight">
             Os 4 Pilares da Nossa Engenharia no DF.
           </h2>
-          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-400 font-light">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-600 font-normal">
             Soluções completas e integradas, desde a concepção elétrica com ART até a conexão na rede e manutenção contínua.
           </p>
         </div>
@@ -105,48 +105,48 @@ export function FourPillars() {
           {pillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="relative rounded-3xl bg-gradient-to-b from-[#0F172A]/80 to-[#0A0F1D]/80 border border-white/[0.08] p-6 sm:p-8 backdrop-blur-xl transition-all duration-300 hover:border-amber-400/40 hover:-translate-y-1 group"
+              className="relative rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-amber-400/60 transition-all duration-300 hover:-translate-y-1 group"
             >
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] group-hover:scale-105 transition-transform">
+                  <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200 group-hover:scale-105 transition-transform">
                     {pillar.icon}
                   </div>
                   <div>
-                    <span className="text-xs font-mono text-slate-400 uppercase tracking-wider block">
+                    <span className="text-xs font-mono text-slate-500 uppercase tracking-wider block">
                       {pillar.subtitle}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight">
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 tracking-tight">
                       {pillar.title}
                     </h3>
                   </div>
                 </div>
 
-                <span className="text-[11px] font-mono font-medium px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20 shrink-0">
+                <span className="text-[11px] font-mono font-semibold px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 shrink-0">
                   {pillar.badge}
                 </span>
               </div>
 
-              <p className="text-xs sm:text-sm text-slate-300 font-light leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed mb-6">
                 {pillar.description}
               </p>
 
-              <ul className="space-y-2.5 mb-6 border-t border-white/[0.06] pt-5">
+              <ul className="space-y-2.5 mb-6 border-t border-slate-100 pt-5">
                 {pillar.highlights.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-300 font-light">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 font-normal">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between">
-                <span className="text-xs font-mono text-slate-500">Pilar {pillar.number}</span>
+              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <span className="text-xs font-mono text-slate-400">Pilar {pillar.number}</span>
                 <a
                   href={pillar.ctaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-amber-400 hover:text-amber-300 transition-colors"
+                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-amber-600 hover:text-amber-700 transition-colors"
                 >
                   <span>{pillar.ctaText}</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

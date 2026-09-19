@@ -11,7 +11,7 @@ import { Footer } from "@/components/sections/footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#070B14] text-slate-100 flex flex-col selection:bg-amber-400 selection:text-slate-950">
+    <main className="min-h-screen bg-[#F8FAFC] text-slate-900 flex flex-col selection:bg-amber-400 selection:text-slate-950">
       <Header />
       <HeroSection />
       <FourPillars />

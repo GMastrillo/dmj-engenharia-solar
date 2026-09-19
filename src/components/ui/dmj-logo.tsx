@@ -3,9 +3,10 @@ import React from "react";
 interface DmjLogoProps {
   className?: string;
   size?: "sm" | "md" | "lg";
+  variant?: "light" | "dark";
 }
 
-export function DmjLogo({ className = "", size = "md" }: DmjLogoProps) {
+export function DmjLogo({ className = "", size = "md", variant = "light" }: DmjLogoProps) {
   const sizeMap = {
     sm: { height: 34, iconSize: 32, titleClass: "text-lg", subClass: "text-[8px]" },
     md: { height: 44, iconSize: 42, titleClass: "text-2xl", subClass: "text-[10px]" },
@@ -13,6 +14,7 @@ export function DmjLogo({ className = "", size = "md" }: DmjLogoProps) {
   };
 
   const { iconSize, titleClass, subClass } = sizeMap[size];
+  const isLight = variant === "light";
 
   return (
     <div className={`inline-flex items-center gap-2.5 select-none ${className}`}>
@@ -23,7 +25,7 @@ export function DmjLogo({ className = "", size = "md" }: DmjLogoProps) {
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="shrink-0 drop-shadow-md"
+        className="shrink-0 drop-shadow-sm"
       >
         {/* Sun rays */}
         <circle cx="38" cy="45" r="16" fill="#F59E0B" />
@@ -49,11 +51,13 @@ export function DmjLogo({ className = "", size = "md" }: DmjLogoProps) {
       {/* Brand Typography */}
       <div className="flex flex-col leading-none">
         <div className={`font-black tracking-wider flex items-center ${titleClass}`}>
-          <span className="text-white">DM</span>
-          <span className="text-amber-400">J</span>
+          <span className={isLight ? "text-slate-900" : "text-white"}>DM</span>
+          <span className="text-amber-500">J</span>
         </div>
         <span
-          className={`font-extrabold uppercase tracking-[0.22em] text-amber-400/90 ${subClass} mt-0.5`}
+          className={`font-extrabold uppercase tracking-[0.22em] ${
+            isLight ? "text-amber-600" : "text-amber-400/90"
+          } ${subClass} mt-0.5`}
         >
           ENGENHARIA SOLAR
         </span>

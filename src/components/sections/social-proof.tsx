@@ -51,16 +51,16 @@ const partners = [
 
 export function SocialProof() {
   return (
-    <section id="depoimentos" className="py-20 sm:py-28 bg-[#070B14] relative border-t border-white/[0.08]">
+    <section id="depoimentos" className="py-20 sm:py-28 bg-[#F8FAFC] relative border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header with Google 5-Star Card */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-amber-400 mb-3 sm:mb-4">
-              <Award className="w-3.5 h-3.5 stroke-[1.5]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-xs font-mono text-amber-700 mb-3 sm:mb-4">
+              <Award className="w-3.5 h-3.5 stroke-[2] text-amber-600" />
               <span>REPUTAÇÃO REGIONAL NO DF</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-bold text-slate-900 tracking-tight">
               A Escolha de Quem Investe em Brasília.
             </h2>
           </div>
@@ -70,23 +70,23 @@ export function SocialProof() {
             href="https://www.google.com/maps/place/DMJ+ENGENHARIA+SOLAR+LTDA/@-15.8848774,-48.0858899,17z/data=!3m1!4b1!4m6!3m5!1s0x935bcdfef3d73e43:0xed370ec8da53de5f!8m2!3d-15.8848774!4d-48.0858899!16s%2Fg%2F11njtndc75?entry=ttu"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto p-4 rounded-2xl bg-[#0F172A] hover:bg-[#141E33] border border-white/[0.1] hover:border-amber-400/40 flex items-center gap-4 shrink-0 shadow-lg transition-all duration-300 group"
+            className="w-full sm:w-auto p-4 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-amber-400/80 flex items-center gap-4 shrink-0 shadow-md transition-all duration-300 group"
           >
-            <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center font-bold text-slate-950 text-xl font-display group-hover:scale-105 transition-transform shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center font-bold text-white text-xl font-display group-hover:scale-105 transition-transform shrink-0 shadow">
               G
             </div>
             <div>
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                  <Star key={i} className="w-4 h-4 text-amber-500 fill-amber-500" />
                 ))}
               </div>
-              <p className="text-xs text-white font-medium mt-1 font-mono flex items-center gap-1.5">
+              <p className="text-xs text-slate-900 font-bold mt-1 font-mono flex items-center gap-1.5">
                 <span>5.0 de Avaliação no Google Maps</span>
               </p>
-              <p className="text-[11px] text-slate-400 font-mono flex items-center gap-1">
+              <p className="text-[11px] text-slate-500 font-mono flex items-center gap-1">
                 <span>Ver avaliações no Google Maps</span>
-                <ExternalLink className="w-3 h-3 text-amber-400" />
+                <ExternalLink className="w-3 h-3 text-amber-600" />
               </p>
             </div>
           </a>
@@ -97,31 +97,31 @@ export function SocialProof() {
           {testimonials.map((item, idx) => (
             <div
               key={idx}
-              className="rounded-3xl bg-[#0F172A]/80 border border-white/[0.08] p-6 sm:p-8 flex flex-col justify-between backdrop-blur-xl group hover:border-amber-400/40 transition-all duration-300"
+              className="rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-amber-400/60 transition-all duration-300"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-1">
                     {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                      <Star key={i} className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
                     ))}
                   </div>
-                  <span className="text-[11px] font-mono text-emerald-400 font-medium">
+                  <span className="text-[11px] font-mono text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                     {item.savings}
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm text-slate-300 font-light leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed mb-6">
                   "{item.text}"
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                 <div>
-                  <h4 className="text-sm font-bold text-white font-display">{item.name}</h4>
-                  <p className="text-[11px] text-slate-400 font-mono">{item.role}</p>
+                  <h4 className="text-sm font-bold text-slate-900 font-display">{item.name}</h4>
+                  <p className="text-[11px] text-slate-500 font-mono">{item.role}</p>
                 </div>
-                <div className="text-[10px] font-mono text-amber-400 flex items-center gap-1">
+                <div className="text-[10px] font-mono text-amber-700 flex items-center gap-1 font-semibold">
                   <MapPin className="w-3 h-3" />
                   <span className="truncate max-w-[120px]">{item.location.split("—")[0]}</span>
                 </div>
@@ -131,13 +131,13 @@ export function SocialProof() {
         </div>
 
         {/* Hardware Tier 1 Partners Bar */}
-        <div className="p-6 rounded-2xl bg-[#171B22]/40 border border-white/[0.06] text-center">
-          <span className="text-xs font-mono uppercase tracking-widest text-slate-400 block mb-4">
+        <div className="p-6 rounded-2xl bg-white border border-slate-200/90 text-center shadow-sm">
+          <span className="text-xs font-mono uppercase tracking-widest text-slate-500 block mb-4 font-semibold">
             EQUIPAMENTOS HOMOLOGADOS & FABRICANTES TIER 1 GLOBAIS
           </span>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
             {partners.map((p, i) => (
-              <span key={i} className="px-3.5 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-xs font-mono font-medium text-slate-300">
+              <span key={i} className="px-3.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-mono font-medium text-slate-700 shadow-sm">
                 {p}
               </span>
             ))}

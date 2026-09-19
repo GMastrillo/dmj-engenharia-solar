@@ -50,19 +50,19 @@ export function FaqContact() {
   };
 
   return (
-    <section id="faq" className="py-20 md:py-32 bg-[#070B14] relative border-t border-white/[0.08]">
+    <section id="faq" className="py-20 md:py-32 bg-white relative border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-amber-400">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-xs font-mono text-amber-700">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
                 <span>SUPORTE & REGULATÓRIO DF</span>
               </div>
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-bold text-slate-900 tracking-tight">
                 Tudo o que Você Precisa Saber.
               </h2>
-              <p className="text-sm sm:text-base text-slate-400 font-light">
+              <p className="text-sm sm:text-base text-slate-600 font-normal">
                 Respostas diretas sobre homologação Neoenergia, prazos e garantia de economia.
               </p>
             </div>
@@ -71,22 +71,22 @@ export function FaqContact() {
               {faqList.map((item, idx) => (
                 <div
                   key={idx}
-                  className="border border-white/[0.08] rounded-2xl overflow-hidden bg-[#0F172A]/70 backdrop-blur-xl transition-colors hover:border-white/[0.15]"
+                  className="border border-slate-200/90 rounded-2xl overflow-hidden bg-white shadow-sm transition-all hover:border-amber-400/60"
                 >
                   <button
                     onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                    className="w-full flex items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-zinc-200 hover:text-amber-400 transition-colors"
+                    className="w-full flex items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-slate-800 hover:text-amber-700 transition-colors"
                   >
                     <span>{item.question}</span>
                     <ChevronDown
-                      className={`w-4 h-4 text-amber-400 shrink-0 ml-4 transition-transform duration-200 ${
+                      className={`w-4 h-4 text-amber-600 shrink-0 ml-4 transition-transform duration-200 ${
                         openIndex === idx ? "rotate-180" : ""
                       }`}
                     />
                   </button>
 
                   {openIndex === idx && (
-                    <div className="px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-white/[0.06] pt-3 font-light">
+                    <div className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3 font-normal">
                       {item.answer}
                     </div>
                   )}
@@ -97,34 +97,34 @@ export function FaqContact() {
             <LocationCard />
           </div>
 
-          <div className="lg:col-span-5 bg-[#0F172A]/90 border border-amber-500/30 rounded-3xl p-7 sm:p-9 shadow-2xl backdrop-blur-xl space-y-6">
+          <div className="lg:col-span-5 bg-gradient-to-br from-amber-50/50 via-white to-amber-50/30 border border-amber-300/80 rounded-3xl p-7 sm:p-9 shadow-xl space-y-6">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-mono font-medium border border-amber-500/20">
-                <MessageSquare className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-medium border border-amber-300">
+                <MessageSquare className="w-3.5 h-3.5 text-amber-600" />
                 <span>Atendimento Consultivo DMJ</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 tracking-tight">
                 Solicite Seu Estudo Técnico Gratuito
               </h3>
-              <p className="text-xs text-slate-400 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 font-normal leading-relaxed">
                 Nossa engenharia analisa sua fatura e elabora um orçamento executivo sob medida em menos de 24 horas.
               </p>
             </div>
 
             {formSent ? (
-              <div className="p-6 rounded-2xl bg-emerald-950/30 border border-emerald-500/40 text-center space-y-3">
-                <CheckCircle className="w-10 h-10 text-emerald-400 mx-auto" />
-                <div className="text-base font-bold text-white font-display">
+              <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3 shadow-sm">
+                <CheckCircle className="w-10 h-10 text-emerald-600 mx-auto" />
+                <div className="text-base font-bold text-slate-900 font-display">
                   Redirecionando para o WhatsApp!
                 </div>
-                <p className="text-xs text-slate-300 font-light">
+                <p className="text-xs text-slate-600 font-normal">
                   Você está sendo conectado com o engenheiro de plantão da DMJ Solar.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-mono text-slate-300 mb-1.5 uppercase tracking-wider">
+                  <label className="block text-xs font-mono text-slate-700 mb-1.5 uppercase tracking-wider font-semibold">
                     Nome Completo
                   </label>
                   <input
@@ -133,12 +133,12 @@ export function FaqContact() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Ex: Carlos Ferreira"
-                    className="w-full px-4 py-3 rounded-xl bg-[#070B14] border border-white/[0.1] focus:border-amber-400 focus:outline-none text-sm text-white placeholder:text-zinc-600 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 focus:border-amber-500 focus:outline-none text-sm text-slate-900 placeholder:text-slate-400 transition-colors shadow-sm"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-zinc-300 mb-1.5 uppercase tracking-wider">
+                  <label className="block text-xs font-mono text-slate-700 mb-1.5 uppercase tracking-wider font-semibold">
                     WhatsApp com DDD
                   </label>
                   <input
@@ -147,12 +147,12 @@ export function FaqContact() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="(61) 90000-0000"
-                    className="w-full px-4 py-3 rounded-xl bg-[#090A0C] border border-white/[0.1] focus:border-amber-400 focus:outline-none text-sm text-white placeholder:text-zinc-600 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 focus:border-amber-500 focus:outline-none text-sm text-slate-900 placeholder:text-slate-400 transition-colors shadow-sm"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-zinc-300 mb-1.5 uppercase tracking-wider">
+                  <label className="block text-xs font-mono text-slate-700 mb-1.5 uppercase tracking-wider font-semibold">
                     Cidade / Região Administrativa
                   </label>
                   <input
@@ -161,13 +161,13 @@ export function FaqContact() {
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="Ex: Samambaia Sul, Taguatinga, Plano Piloto..."
-                    className="w-full px-4 py-3 rounded-xl bg-[#090A0C] border border-white/[0.1] focus:border-amber-400 focus:outline-none text-sm text-white placeholder:text-zinc-600 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 focus:border-amber-500 focus:outline-none text-sm text-slate-900 placeholder:text-slate-400 transition-colors shadow-sm"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 py-4 rounded-xl text-zinc-950 font-bold bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 shadow-xl shadow-amber-500/20 transition-all active:scale-95 text-sm tracking-tight"
+                  className="w-full flex items-center justify-center gap-2 py-4 rounded-xl text-slate-950 font-bold bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 shadow-xl shadow-amber-500/20 transition-all active:scale-95 text-sm tracking-tight"
                 >
                   <Send className="w-4 h-4" />
                   <span>Enviar para o WhatsApp DMJ</span>
