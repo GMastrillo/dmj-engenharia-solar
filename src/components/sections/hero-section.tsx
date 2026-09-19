@@ -37,13 +37,13 @@ export function HeroSection() {
 
             {/* Main Headline */}
             <div>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-display font-extrabold tracking-tight text-white leading-[1.08]">
-                ENGENHARIA SOLAR{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500">
+              <h1 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] 2xl:text-[54px] font-display font-black tracking-tight text-white leading-[1.1]">
+                <span className="block">ENGENHARIA SOLAR</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500">
                   DE PRECISÃO.
                 </span>
               </h1>
-              <div className="mt-2 text-xl sm:text-2xl md:text-3xl font-display font-medium text-slate-300">
+              <div className="mt-3 text-lg sm:text-xl md:text-2xl font-display font-medium text-slate-300">
                 Energia que Transforma. Economia que Dura.
               </div>
             </div>
@@ -95,8 +95,10 @@ export function HeroSection() {
           </div>
 
           {/* Right Column: Solar Command Console HUD */}
-          <div className="lg:col-span-5">
-            <SolarCommandHud />
+          <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
+            <div className="w-full max-w-md xl:max-w-lg">
+              <SolarCommandHud />
+            </div>
           </div>
         </div>
       </div>
